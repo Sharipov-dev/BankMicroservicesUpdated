@@ -14,3 +14,15 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to my API"
+  contactDetails:
+    name: "Arthur"
+    email: "sharipov@sheridancollege.ca"
+  onCallSupport:
+    - (555)555-2222
+    - (437)937-0916
