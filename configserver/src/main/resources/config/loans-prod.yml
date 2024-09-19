@@ -1,0 +1,12 @@
+
+build:
+  version: "1.0"
+
+loans:
+  message: "Welcome to my API"
+  contactDetails:
+    name: "Will Smith"
+    email: "willsmith@sheridancollege.ca"
+  onCallSupport:
+    - (777)555-2222
+    - (228)937-0916

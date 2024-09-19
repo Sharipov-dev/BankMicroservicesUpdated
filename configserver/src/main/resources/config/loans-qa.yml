@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+loans:
+  message: "Welcome to api"
+  contactDetails:
+    name: "Rayan Gosling"
+    email: "rayangosling@sheridancollege.ca"
+  onCallSupport:
+    - (666)555-2222
+    - (222)937-0916

@@ -1,6 +1,7 @@
 server:
   port: 8090
 spring:
+  a
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver

@@ -1,12 +1,8 @@
-spring:
-  config:
-    activate:
-      on-profile: "qa"
 
 build:
   version: "2.0"
 
-accounts:
+cards:
   message: "Welcome to api"
   contactDetails:
     name: "Rayan Gosling"
