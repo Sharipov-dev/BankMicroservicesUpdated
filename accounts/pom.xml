@@ -10,8 +10,6 @@
 	</parent>
 	<groupId>com.eazybytes</groupId>
 	<artifactId>accounts</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>accounts</name>
 	<description>Microservice for Accounts</description>
 	<properties>
 		<java.version>17</java.version>

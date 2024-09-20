@@ -1,6 +1,10 @@
 server:
   port: 8090
 spring:
+  application:
+    name: "loans"
+  profiles:
+    active: "prod"
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -14,11 +18,5 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-  profiles:
-    active:
-      - "qa"
   config:
-    import:
-      - "application_prod.yml"
-      - "application_qa.yml"
+    import: "optional:configserver:http://localhost:8071/"
