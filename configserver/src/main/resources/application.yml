@@ -5,9 +5,18 @@ spring:
   application:
     name: "configserver"
   profiles:
-    active: native
+    #active: native
+    active: git
   cloud:
     config:
       server:
-        native:
-          search-locations: "classpath:/config"
+        git:
+          uri: "https://github.com/Sharipov-dev/bank-config.git"
+          #branch name
+          default-label: master
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+
+#        native:
+#          search-locations: "classpath:/config"
