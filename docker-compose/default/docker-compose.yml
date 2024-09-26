@@ -16,7 +16,7 @@ services:
       service: network-deploy-service
 
   configserver:
-    image: "artursharipov/configserver:s6"
+    image: "sharipov/configserver:s6"
     container_name: configserver-ms
     ports:
       - "8071:8071"
@@ -34,7 +34,7 @@ services:
       service: network-deploy-service
 
   accounts:
-    image: "artursharipov/accounts:s6"
+    image: "sharipov/accounts:s6"
     container_name: accounts-ms
     ports:
       - "8080:8080"
@@ -44,7 +44,7 @@ services:
       file: common-config.yml
       service: microservice-configserver-config
   cards:
-    image: "artursharipov/cards:s6"
+    image: "sharipov/cards:s6"
     container_name: cards-ms
     ports:
       - "9000:9000"
@@ -55,7 +55,7 @@ services:
       service: microservice-configserver-config
 
   loans:
-    image: "artursharipov/loans:s6"
+    image: "sharipov/loans:s6"
     container_name: loans-ms
     ports:
       - "8090:8090"
