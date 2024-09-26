@@ -1,42 +1,41 @@
-server:
-  port: 8071
-
 spring:
   application:
     name: "configserver"
   profiles:
-    #active: native
+    # active: native
     active: git
   cloud:
     config:
       server:
+        # native:
+        # search-locations: "classpath:/config"
+        # search-locations: "file:///Users//eazybytes//Documents//config"
         git:
-          uri: "https://github.com/Sharipov-dev/bank-config.git"
-          #branch name
-          default-label: master
+          uri: "https://github.com/eazybytes/eazybytes-config.git"
+          default-label: main
           timeout: 5
           clone-on-start: true
           force-pull: true
   rabbitmq:
     host: "localhost"
-    port: 5672
+    port: 9010
     username: "guest"
     password: "guest"
-#        native:
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
   health:
-    readinessstate:
+    readiness-state:
       enabled: true
-    livenessstate:
+    liveness-state:
       enabled: true
   endpoint:
     health:
       probes:
         enabled: true
 
-
-#          search-locations: "classpath:/config"
+server:
+  port: 8071
