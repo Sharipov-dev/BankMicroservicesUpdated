@@ -1,10 +1,10 @@
 services:
   rabbit:
     image: rabbitmq:3.12-management
-    hostname: rabbitmq
+    hostname: localhost
     ports:
-      - "5672:5672"
-      - "15672:15672"
+      - "9010:9010"
+      - "19010:19010"
     healthcheck:
       test: rabbitmq-diagnostics check_port_connectivity
       interval: 10s
@@ -28,7 +28,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
-      start_period: 10s
+      start_period: 30s
     extends:
       file: common-config.yml
       service: network-deploy-service
@@ -38,6 +38,9 @@ services:
     container_name: accounts-ms
     ports:
       - "8080:8080"
+    depends_on:
+      configserver:
+        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: "accounts"
     extends:
@@ -48,6 +51,9 @@ services:
     container_name: cards-ms
     ports:
       - "9000:9000"
+    depends_on:
+      configserver:
+        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: "cards"
     extends:
@@ -59,6 +65,9 @@ services:
     container_name: loans-ms
     ports:
       - "8090:8090"
+    depends_on:
+      configserver:
+        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: "loans"
     extends:
