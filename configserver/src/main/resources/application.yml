@@ -11,14 +11,14 @@ spring:
         # search-locations: "classpath:/config"
         # search-locations: "file:///Users//eazybytes//Documents//config"
         git:
-          uri: "https://github.com/eazybytes/eazybytes-config.git"
-          default-label: main
+          uri: "https://github.com/Sharipov-dev/bank-config.git"
+          default-label: master
           timeout: 5
           clone-on-start: true
           force-pull: true
   rabbitmq:
     host: "localhost"
-    port: 9010
+    port: 5672
     username: "guest"
     password: "guest"
 
